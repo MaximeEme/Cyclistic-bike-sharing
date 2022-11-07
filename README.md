@@ -1,18 +1,18 @@
-#INTRODUCTION TO THE CYCLISTIC CASE STUDY 
+# INTRODUCTION TO THE CYCLISTIC CASE STUDY 
 
 This project is a part of the capstone project of the Google Data Analytics Professional Certificate. It will follow the 6 steps of Data analysis learned during the online classes. 
 
-##Step 1: Ask 
+## Step 1: Ask 
 
-###1.Cyclistic 
+### 1.Cyclistic 
 
 Cyclistic is a fictional bike-sharing company based in Chicago, Illinois. They possess 5800 bikes (and also cargo-bikes, hand-trycicles and reclining bikes) and 600 docked stations throughout the city. 
 
-###2.Business task 
+### 2.Business task 
 
 Analyzing historical trip data from Cyclistic to identify trends and connections between casual riders and annual members. 
 
-###3.Key Stakeholders
+### 3.Key Stakeholders
 
 **Lily Moreno**: She is the manager and the director of marketing. She is handling the development of campaigns and the ways to promote the bike sharing program.
 
@@ -20,17 +20,17 @@ Analyzing historical trip data from Cyclistic to identify trends and connections
 
 **Cyclistic executive team**: The notoriously detail-oriented executive team will decide whether to approve the recommended marketing program. 
 
-##Step 2: Prepare 
+## Step 2: Prepare 
 
-###1.Information on data 
+### 1.Information on data 
 
 The data has been share publicly by Motivate International inc under strict licence. It is composed of monthly/ quarterly spreadsheet files from April 2020 to August 2022. The data have been collected from the use of Motival International inc's bikes and it includes Ride id, type of bikes, member status, date of ride, hour of ride, start station, end station, station id, coordinate of the station ...
 
-###2.Limitations of data. 
+### 2.Limitations of data. 
 
 The data obtained is from April 2020 to August 2022. I choose to work on two years worth of data from April 2020 to April 2022 due to the huge amount of data, the analysis can only be judged as a multi-year analysis. As it publicly shared on kaggle, I have not doubt on its integrity. 
 
-###3.Is the data ROCC ?
+### 3.Is the data ROCC ?
 
 A good data source is ROCCC which stands for Reliable, Original, Comprehensive, Current, and Cited.
 
@@ -44,11 +44,11 @@ Current - High - The data is from 2020 to 2022.
 
 Cited - Med - It is first-party data. 
 
-#Step 3: Process 
+# Step 3: Process 
 
 I used R to conduct my analysis due to the accessibility of the program, amount of data and being able to create the visualisations.
 
-###1.Installing packages and library 
+### 1.Installing packages and library 
 
 ```{r}
 
@@ -88,7 +88,7 @@ library(lubridate)
 
 I chose these packages to help me with my analysis.
 
-###2.Importing and preparing the data
+### 2.Importing and preparing the data
 
 ```{r}
 
@@ -152,7 +152,7 @@ X202102_divvy_tripdata < mutate(X202102_divvy_tripdata, started_at = as.characte
 
 ```
 
-###3.Data cleaning 
+### 3.Data cleaning 
 
 I checked the type of each bikes offered and member status of every tables. 
 
@@ -256,9 +256,9 @@ bike_tripdata$duration <- difftime(bike_tripdata$ended_at, bike_tripdata$started
 
 ```
 
-#Step 4: Analyse 
+# Step 4: Analyse 
 
-###1.Determine the number of member vs casual riders. 
+### 1.Determine the number of member vs casual riders. 
 
 I wanted to determine the number of actual member vs the number of casual riders.
 
@@ -280,7 +280,7 @@ I plotted the results.
 
 From April 2020 to April 2022, the company had more member (customers that pay a membership fee) than casual riders. 
 
-###2. Number of rides per users and type of bikes. 
+### 2. Number of rides per users and type of bikes. 
 
 Then, I wanted to see the number of rides per users (member and casual) by rides offered (electric, classic and docked bikes) and also the percentage. 
 
@@ -296,7 +296,7 @@ I also plotted the results.
 
 Docked bikes are the go-to bikes from casual riders and member riders. Classic bikes (which are dockless are number 2 in casual but close second for member) and electric bikes are third. Both casual and member seem to like to rely on dock bikes and trust the system to go around. 
 
-###3. The number of rides per month. 
+### 3. The number of rides per month. 
 
 I wondered which months had the most users. 
 
@@ -318,7 +318,7 @@ I plotted the results.
 
 May, July and September are casual’s busiest month. It is no surprise to witness spring and summer months being the busiest month for the bike sharing company. The member are again more consistent in their use of the bike throughout the year with May, July and November being the busiest but nine month out of the twelves have at least 200,000 rides which is surprising. 
 
-###4.Determine the number of rides for each day. 
+### 4.Determine the number of rides for each day. 
 
 I wanted to determine which day of the week was the busiest for each type of membership. 
 
@@ -339,7 +339,7 @@ According to the plots, member riders are the most consistent in using the bikes
 
 The difference between member and casual riders can be explained through the idea of commute + leisure for the member but only for leisure for the casual riders. 
 
-###5.Getting the number of rides per hour. 
+### 5.Getting the number of rides per hour. 
 
 I wanted to be more precise by having the number of rides per hour for each membership.  
 
@@ -360,7 +360,7 @@ And I plotted the results.
 
 Member riders mostly use the bike to commute back home with a massive peak of use between 3 pm and 8pm (15h to 20h). The same time slot for the casual riders is the highest peak but can’t be compared to the member’s usage in term of number. It can be said that member use bikes throughout the day with some consistency to the difference of the casual users that have a growing pattern from 10 am to 3 pm. 
 
-###6. Mapping of data coordinates of member and casual. 
+### 6. Mapping of data coordinates of member and casual. 
 
 I thought that it would be a very interesting way to show ride data. I used Tableau to do it using the map graph. 
 
@@ -369,7 +369,7 @@ I thought that it would be a very interesting way to show ride data. I used Tabl
 
 As the graphs show, Member riders are along the lake-shore and a bit more inland but use more stations overall and have more ride from a station a to a station b. Casual riders on the other hand ride more along the lake-shore and have more ride from station a and return to that same station a. 
 
-###7.Mean duration and mean duration for member and casual riders. 
+### 7.Mean duration and mean duration for member and casual riders. 
 
 ```{r}
 
@@ -393,11 +393,11 @@ And I plotted the results.
 
 I can confirm that the mean duration of a bike trip by casual riders is more than 40 minutes long compared to the 15 minutes of the member riders. it confirmes that the casual riders use the bike for leisure. 
 
-#Step 5: Share phase 
+# Step 5: Share phase 
 
 See the graphs throughout this document 
 
-#Step 6: Act phase 
+# Step 6: Act phase 
 
 As I said, over the two-year period that I covered (2020/2022), they were more member than casual riders. The member preferred the docked bikes and the classic bike being close second than electrical bikes. 
 
