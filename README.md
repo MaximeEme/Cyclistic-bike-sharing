@@ -18,8 +18,6 @@ Analyzing historical trip data from Cyclistic to identify trends and connections
 
 **Cyclistic Executive team**: A team of data analysts who are responsible for collecting, analyzing, and reporting data that helps guide Cyclistic marketing strategy.
 
-**Cyclistic executive team**: The notoriously detail-oriented executive team will decide whether to approve the recommended marketing program. 
-
 ## Step 2: Prepare 
 
 ### 1.Information on data 
